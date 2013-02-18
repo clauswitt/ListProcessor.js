@@ -8,9 +8,9 @@
 
 var ListProcessor;
 ListProcessor = function(list, timeout, itemsPerRun, copyInsteadOfReference, context, global) {
-    timeout = timeout || 100;
-    context = context || this;
-    global = global || window;
+    timeout = timeout || 100;
+    context = context || this;
+    global = global || window;
     itemsPerRun = itemsPerRun || 1;
     if(typeof copyInsteadOfReference === 'undefined') {
         copyInsteadOfReference = false;
@@ -39,8 +39,8 @@ ListProcessor = function(list, timeout, itemsPerRun, copyInsteadOfReference, con
     };
 
     this.run = function(processor, callback) {
-        processFunction = processor || function(item) {console.log(item);};
-        onEnd = callback || function() {console.log('ended');};
+        processFunction = processor || function(item) {console.log(item);};
+        onEnd = callback || function() {console.log('ended');};
         process();
     };
 };
